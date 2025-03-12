@@ -12,7 +12,7 @@
         }
 
         .bloco {
-            background-color: blue;
+            
             color: white;
             padding: 1rem;
             margin: 1rem;
@@ -21,6 +21,15 @@
 
 
         }
+
+        .par {
+            background-color: blue;
+        }
+        
+        .impar {
+            background-color: green;
+        }
+
 
         .conteiner {
             display: flex;
@@ -42,17 +51,15 @@
             tamplate string
             */
 
-            let num =parseInt(prompt(" informe o numero"))
+            let ida =parseInt(prompt(" informe a idade"));
             
-            document.write(`<div class="bloco">log_2(${num}) = ${Math.log2(num)} </div>`);
-            document.write(`<div class="bloco">log_10(${num}) = ${Math.log10(num)} </div>`);
-            document.write(`<div class="bloco">log_e(${Math.E}) = ${Math.log(Math.E)} </div>`);
-            document.write(`<div class="bloco">raiz(${num}) = ${Math.sqrt(num)} </div>`);
-            document.write(`<div class="bloco">(${num}) ^ 3 = ${Math.pow(num, 3)} </div>`);
-            document.write(`<div class="bloco">raiz(${num}) = ${Math.pow(num, .5)} </div>`);
-
-
-
+            if (idade < 16) {
+                document.write(`<div class="bloco par">A pessoa é menor de idade</div>`);
+                document.write(`<div class="bloco impar">A pessoa nâo pode votar</div>`);
+            } else {
+                document.write(`<div class="bloco par">A pessoa é maior de idade</div>`);
+                document.write(`<div class="bloco impar">A pessoa pode votar</div>`);
+            }
 
 
         </script>

@@ -12,7 +12,7 @@
         }
 
         .bloco {
-            background-color: blue;
+            
             color: white;
             padding: 1rem;
             margin: 1rem;
@@ -22,6 +22,13 @@
 
         }
 
+        .par {
+            background-color: blue;
+        }
+        
+        .impar {
+            background-color: green;
+        }
         .conteiner {
             display: flex;
             height: 15rem;
@@ -42,17 +49,13 @@
             tamplate string
             */
 
-            let num =parseInt(prompt(" informe o numero"))
+            let num =parseInt(prompt(" informe um numero"))
             
-            document.write(`<div class="bloco">log_2(${num}) = ${Math.log2(num)} </div>`);
-            document.write(`<div class="bloco">log_10(${num}) = ${Math.log10(num)} </div>`);
-            document.write(`<div class="bloco">log_e(${Math.E}) = ${Math.log(Math.E)} </div>`);
-            document.write(`<div class="bloco">raiz(${num}) = ${Math.sqrt(num)} </div>`);
-            document.write(`<div class="bloco">(${num}) ^ 3 = ${Math.pow(num, 3)} </div>`);
-            document.write(`<div class="bloco">raiz(${num}) = ${Math.pow(num, .5)} </div>`);
-
-
-
+            if (num % 2 == 0) {
+                document.write(`<div class="bloco par">o número ${num} é par</div>`);
+            } else {
+                document.write(`<div class="bloco impar">o número ${num} é impar</div>`);
+            }
 
 
         </script>
